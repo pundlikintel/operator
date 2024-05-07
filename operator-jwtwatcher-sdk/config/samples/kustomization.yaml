@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- authorizer_v1alpha1_reqauthwatcher.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

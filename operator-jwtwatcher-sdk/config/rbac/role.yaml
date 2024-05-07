@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - authorizer.watcher.reqauth.com
+  resources:
+  - reqauthwatchers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - authorizer.watcher.reqauth.com
+  resources:
+  - reqauthwatchers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - authorizer.watcher.reqauth.com
+  resources:
+  - reqauthwatchers/status
+  verbs:
+  - get
+  - patch
+  - update
